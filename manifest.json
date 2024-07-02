@@ -1,0 +1,26 @@
+{
+  "name" : "E-okul Kitap Seçme",
+  "version" : "0.1",
+  "manifest_version": 2,
+  "description": "E-okul Öğrenci Kitap Bilgileri Ekranında Okunan Tüm kitapların Tümünü birden seçme görevini görür.",
+  "content_scripts" : [
+    {
+      "matches" : ["https://e-okul.meb.gov.tr/IlkOgretim/OKL/IOK19002.aspx*"],
+        "js" : ["jquery-1.7.1.min.js", "bulk_url_removal.js"]
+    }
+
+  ],
+  
+  "permissions": [
+    "https://e-okul.meb.gov.tr/IlkOgretim/OKL/IOK19002.aspx*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16" : "trash_icon16.png",
+    "32" : "trash_icon32.png",
+    "48" : "trash_icon48.png",
+    "128" : "trash_icon128.png"
+  }
+}
